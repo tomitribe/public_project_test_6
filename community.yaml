@@ -1,0 +1,17 @@
+%YAML 1.2
+---
+friendly_name: sabot
+short_description:
+Stream editor implemented as a series of InputStream and OutputStream filters. Like the unix sed and can manipulate an endless stream with little memory. 
+
+long_description: 
+Swizzle stream is pretty nice for finding/manipulating data in streams. It consists of two approaches:
+
+ - Stream filters - wrap and rewrap input streams with input stream filters that can add/remove/replace data as it's read from the stream.
+ - Stream lexer - variation of the above approach but with the stream details hidden exposing only 'String readToken(...)' methods to pull only desired data from a stream.
+
+One limitation is that it does not support regular expressions. All tokens are treated as string literals which keeps the searching/scanning very fast and efficient as we only need to buffer and compare a known and fixed amount of data while reading each new byte of a stream.
+
+documentation: README.adoc
+snapshot: http://54.152.134.145/docs/sabot/snapshot.png
+icon: http://54.152.134.145/docs/sabot/icon.png
