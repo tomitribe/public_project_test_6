@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-friendly_name: sabot
+friendly_name: swizzle
 short_description:
 Stream editor implemented as a series of InputStream and OutputStream filters. Like the unix sed and can manipulate an endless stream with little memory. 
 
